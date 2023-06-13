@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登出成功</title>
+    <style>
+        div{
+            font-size: 16px;
+            background-color:#F8F9FA;
+            height: 50px;
+            width: 350px;
+            text-align: center;
+            line-height: 50px;
+            margin: auto ;
+            margin-top: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div');
+        var t = 3;
+        fn();
+        setInterval(fn, 1000);
+        function fn() {
+            if (t === 0){
+            location.href = '/login';
+        }    
+            div.innerHTML = '登出成功，您將在 '+t+' 秒後跳轉至登錄頁面';
+            t--;
+        }        
+    </script>
+</body>
+</html>
